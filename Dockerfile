@@ -21,8 +21,8 @@ LABEL description="nodejs based on alpine" \
       maintainer="pierexmachina <https://github.com/pierexmachina>" \
       build_ver="2017120901"
 
-ENV UID=991 \
-    GID=991
+ENV UID=1010 \
+    GID=1010
 
 RUN export BUILD_DEPS="git \
                 wget \
