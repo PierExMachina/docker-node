@@ -1,0 +1,9 @@
+#!/bin/sh
+
+chown -R ${UID}:${GID} /usr/src/app
+
+if [ '$@' == '' ]; then
+    exec su-exec ${UID}:${GID} /sbin/tini -- node -v
+else
+    exec su-exec ${UID}:${GID} /sbin/tini -- "$@"
+fi
